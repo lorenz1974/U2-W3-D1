@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>I'm a Base Bootstrap HTML file! With someting more...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- If you want to use BS Icons... -->
+    <!-- <link rel="stylesheet" href="https: //cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
+    <!-- ... if you prefer Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <!-- Insert you stylesheet, if any. -->
+    <!-- <link href="/myStyleSheet.css" rel="stylesheet"> -->
+
+</head>
+
+<body>
+    <header>
+        <h1 class='text-center'>Form raccolta dati</h1>
+    </header>
+
+    <main>
+        <div class="container border border-1 border-warning">
+            <form>
+
+                <h2>first Pet</h2>
+                <div class="row row-cols-1  row-cols-md-2 row-cols-lg-4 mt-5">
+                    <div class="col form-group">
+                        <label class="fw-bold" for="petName1">Name of the first pet</label>
+                        <input id="petName1" type="text" class="form-control mt-2" placeholder="Pet name"
+                            value="Nome Pet 1" required>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" for=" ownerName1">Name of the first owner</label>
+                        <input id="ownerName1" type="text" class="form-control mt-2" placeholder="Owner name"
+                            value="Nome proprietario 1" required>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" for=" species1">Species of the first pet</label>
+                        <select id="species1" type="text" class="form-control mt-2">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" for=" greed1">greed of the first pet</label>
+                        <select id="greed1" type="text" class="form-control mt-2">
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+
+                <h2 class="mt-5">second Pet</h2>
+                <div class="row row-cols-1  row-cols-md-2 row-cols-lg-4 mt-5">
+                    <div class="col form-group">
+                        <label class="fw-bold" for=" petName2">Name of the second pet</label>
+                        <input id="petName2" type="text" class="form-control mt-2" placeholder="Pet name"
+                            value="Nome Pet 2" required>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" for=" ownerName2">Name of the second owner</label>
+                        <input id="ownerName2" type="text" class="form-control mt-2" placeholder="Owner name"
+                            value="Nome proprietario 2" required>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" for=" species2">Species of the second pet</label>
+                        <select id="species2" type="text" class="form-control mt-2">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" for=" greed2">greed of the second pet</label>
+                        <select id="greed2" type="text" class="form-control mt-2">
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-5 mb-3">
+                    <div class="col d-flex justify-content-center">
+                        <button id="sendButton" class="btn btn-success">INVIO</button>
+                    </div>
+                </div>
+
+                <div id="alert" class="alert alert-danger mt-3 invisible" role="alert">
+                    This is a danger alert—check it out!
+                </div>
+
+            </form>
+
+            <h2>Tabella risultati</h2>
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>first Pet Name</th>
+                        <th>first Owner</th>
+                        <th>first Species</th>
+                        <th>first greed</th>
+                        <th>second Pet Name</th>
+                        <th>second Owner</th>
+                        <th>second Species</th>
+                        <th>second greed</th>
+                        <th>CHECK</th>
+                    </tr>
+                <tbody id="tableBody"></tbody>
+                </thead>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Insert here your footer. -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- You can also include Popper and our JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, -->
+    <!-- save some kilobytes by not including Popper. -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+
+    <!-- Some Tools Script -->
+    <script src="./jsTools.js"></script>
+
+    <!-- Insert you scripts here. -->
+    <script src="/pet.js"></script>
+
+</body>
+
+</html>
