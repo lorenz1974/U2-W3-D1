@@ -12,7 +12,6 @@ class Pet {
 }
 
 
-
 const pets = {
     'Select...': [],
     Dog: ["Labrador Retriever", "German Shepherd", "Beagle"],
@@ -44,9 +43,6 @@ const generateSelect = (type) => {
     _D(3, `options for ${type}: `, options);
     return options;
 };
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -117,6 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
         rowHTML += `</tr>`
 
         tableBody.innerHTML += rowHTML
+
+
+        document.getElementsByTagName('form')[0].reset();
+        [petName1.value, petName2.value, ownerName1.value, ownerName2.value] = Array(4).fill('');
 
     })
 
