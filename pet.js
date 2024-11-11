@@ -79,9 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sendButton.addEventListener('click', function (e) {
         e.preventDefault()
 
-        if (species1.value === 'Select...' || species2.value === 'Select...' || greed1.value === 'Select...' || greed2.value === 'Select...') {
+        _D(3, 'species1', species1.value, 'species2', species2.value, 'greed1', greed1.value, 'greed2', greed2.value)
+
+        if (species1.value.trim() === 'Select...' || species2.value.trim() === 'Select...' || greed1.value.trim() === 'Select...' || greed2.value.trim() === 'Select...') {
             alertDiv.innerHTML = 'ATTENTION: select species and breed for all the pets'
-            alertDiv.classList.toggle('invisible')
+            alertDiv.classList.remove('invisible')
             return
         } else {
             alertDiv.classList.add('invisible')
