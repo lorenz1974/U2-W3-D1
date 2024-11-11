@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const greed2 = document.getElementById('greed2')
 
     const sendButton = document.getElementById('sendButton')
+    const resetButton = document.getElementById('resetButton')
 
     const alertDiv = document.getElementById('alert')
 
@@ -76,12 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault()
 
         _D(3, 'species1', species1.value, 'species2', species2.value, 'greed1', greed1.value, 'greed2', greed2.value)
-
-        if (species1.value.trim() === 'Select...' || species2.value.trim() === 'Select...' || greed1.value.trim() === 'Select...' || greed2.value.trim() === 'Select...') {
-            alertDiv.innerHTML = 'ATTENTION: select species and breed for all the pets'
+        if (petName1.value.trim() === '' || petName2.value.trim() === '' || ownerName1.value.trim() === '' || ownerName2.value.trim() === '') {
+            alertDiv.innerHTML = 'ATTENTION: Insert the information of the pets and the owners.'
             alertDiv.classList.remove('invisible')
             return
-        } else {
+
+        } else if (species1.value.trim() === 'Select...' || species2.value.trim() === 'Select...' || greed1.value.trim() === 'Select...' || greed2.value.trim() === 'Select...') {
+            alertDiv.innerHTML = 'ATTENTION: select species and breed for all the pets.'
+            alertDiv.classList.remove('invisible')
+            return
+
+        }
+        else {
             alertDiv.classList.add('invisible')
         }
 
@@ -120,4 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 
+    resetButton.addEventListener('click', () => {
+
+        document.getElementsByTagName('form')[0].reset();
+        [petName1.value, petName2.value, ownerName1.value, ownerName2.value] = Array(4).fill('');
+
+    })
 })
